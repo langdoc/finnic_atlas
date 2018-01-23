@@ -26,12 +26,14 @@ map_finnic <- function(map =  "151"){
   
   title_text <- current_selection$feature_description[1] %>% as.character()
   
+  current_selection <- current_selection %>% mutate(popup_text = glue("<b>{location}:</b></br>{feature_value}"))
+  
   leaflet(data = current_selection) %>%
     addTiles() %>%
     addCircleMarkers(color = ~pal(feature_value),
                      radius = 4,
                      stroke = FALSE, fillOpacity = 0.5,
-                     popup = ~feature_value) %>%
+                     popup = ~popup_text) %>%
     addLegend("bottomleft", pal = pal, values = ~feature_value,
               title = title_text,
               opacity = 1
