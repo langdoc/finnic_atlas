@@ -8,6 +8,9 @@ library(sf)
 library(glue)
 library(bookdown)
 
+unzip("test/kettunen.zip", exdir = "data", overwrite = TRUE)
+
+source("R/parse_kettunen.R")
 source("R/map_finnic.R")
 source("R/write_atlas_page.R")
 
