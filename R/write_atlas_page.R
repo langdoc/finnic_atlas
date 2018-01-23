@@ -6,7 +6,7 @@ source('R/map_finnic.R')
 map_finnic({map_number})
 ```
 This map has been generated from Lauri Kettunen's Finnish Dialect Atlas data 
-which has been distributed [Avaa-portal](https://avaa.tdata.fi/web/kotus/aineistot).
+which has been made available in [Avaa-portal](https://avaa.tdata.fi/web/kotus/aineistot) by [Institute for the languages of Finland](https://www.kotus.fi/).
 The example has been created by Niko Partanen, and the reproducible code can be
 found from this [GitHub repository](https://github.com/langdoc/finnic_atlas). 
 This is a proof of concept, and the ideas and pull requests are more than welcome.
